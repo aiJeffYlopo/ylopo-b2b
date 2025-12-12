@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ylopo Blue Ocean Opportunity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Greens */
+            --primary-dark-green: #198471;
+            --secondary-vibrant-green: #20ad95;
+            --tertiary-green: #7bc109;
+
+            /* Greys / Blues */
+            --dark-blue-grey: #203a4f;
+            --mid-blue-accent: #3ea8d0;
+            
+            /* Oranges */
+            --accent-vibrant-orange: #f7ad33;
+            --dark-orange-red: #e79919; 
+
+            --bg-light: #F8F9FA;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            color: var(--dark-blue-grey);
+        }
+        .card {
+            background-color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-dark-green), var(--mid-blue-accent));
+        }
+        .strike-through {
+            text-decoration: line-through;
+            text-decoration-color: #EF4444;
+            text-decoration-thickness: 2px;
+            opacity: 0.7;
+        }
+        .letter-box {
+            background-image: linear-gradient(#fdfbf7 2px, transparent 2px), linear-gradient(90deg, #fdfbf7 2px, transparent 2px), linear-gradient(#fdfbf7 1px, transparent 1px), linear-gradient(90deg, #fdfbf7 1px, transparent 1px);
+            background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+            background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+            background-color: #fffdf9;
+        }
+    </style>
+</head>
+<body class="p-2 sm:p-8">
+
+    <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+
+        <!-- Logo Section -->
+        <div class="bg-white p-6 flex justify-center border-b border-gray-100">
+            <img src="https://go.ylopo.com/l/923023/2024-09-24/2yc158/923023/1727222654DOG4OUhH/ylopo_logo.png" alt="Ylopo Logo" class="h-12 w-auto">
+        </div>
+
+        <!-- Header -->
+        <header class="gradient-bg text-white p-8 sm:p-14 text-center relative overflow-hidden">
+            <!-- Background pattern decorative -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <svg width="100%" height="100%">
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+            </div>
+
+            <div class="relative z-10">
+                <div class="inline-block bg-[--accent-vibrant-orange] text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4 shadow-lg">Exclusive Invitation</div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 leading-tight">
+                    MONOPOLIZE THE <br/>
+                    <span class="text-[--accent-vibrant-orange]">"HIDDEN" SELLER MARKET</span>
+                </h1>
+                <h2 class="text-xl sm:text-2xl font-light opacity-95 max-w-3xl mx-auto">
+                    We are looking for <span class="font-bold underline decoration-[--accent-vibrant-orange] decoration-4 underline-offset-4">ONE Partner</span> in <span class="dma-location font-black bg-white/20 px-2 rounded">Your Area</span> to accept a "Blue Ocean" of AI Propensity Leads.
+                </h2>
+            </div>
+        </header>
+
+        <!-- NEW SECTION: Sales Letter Body -->
+        <section class="p-6 sm:p-12 bg-stone-50 border-b border-gray-200">
+            <div class="max-w-3xl mx-auto letter-box p-8 rounded-lg shadow-sm border border-stone-200 text-gray-700 text-lg leading-relaxed">
+                <p class="font-bold text-sm text-gray-400 uppercase tracking-widest mb-4">Internal Memo: <span class="dma-location">Your Area</span> Expansion</p>
+                
+                <h3 class="font-bold text-xl text-[--dark-blue-grey] mb-4">TO: The One Team Leader in <span class="dma-location">Your Area</span> Ready to Monopolize the "Hidden" Seller Market</h3>
+                <p class="font-bold text-[--secondary-vibrant-green] mb-6 italic">HOW TO CORNER THE MARKET ON "DOUBLE-VERIFIED" SELLER LEADS BEFORE YOUR COMPETITORS EVEN KNOW THEY EXIST</p>
+                
+                <p class="mb-4">Dear Team Leader,</p>
+                <p class="mb-4">If you are like the top producers I work with, you are tired of the "Lead Hamster Wheel."</p>
+                <p class="mb-4">You are tired of paying for top-of-funnel noise. You are tired of your ISAs chasing 100 "ghosts" just to find one person who might sell in six months. You are tired of fighting for scraps in a crowded market where every other agent is buying the same recycled data.</p>
+                <p class="mb-4">You don't need more leads. You need a new way to find the truth.</p>
+                <p class="mb-4">This letter is an invitation to test a Proprietary System of lead generation—one that reverses the traditional funnel. Instead of chasing leads to find intent, we use proprietary AI to verify intent before the lead ever hits your CRM.</p>
+                <p class="font-bold text-[--dark-blue-grey] text-xl mb-6">We call this the AI Propensity Lead.</p>
+
+                <!-- Hidden Content / Read More -->
+                <div id="full-letter" class="hidden space-y-4 border-t border-gray-200 pt-6 mt-6">
+                    <h4 class="font-bold text-lg text-[--dark-blue-grey]">The Problem With "Normal" Leads (And Why This Is Different)</h4>
+                    <p>Most leads you buy are just casual browsers—they clicked on a house online, but they have no real intention of moving. You pay for the privilege of educating them.</p>
+                    <p>Ylopo has developed a proprietary algorithm that changes the math. We don't just look at clicks. We analyze hundreds of consumer data points to identify homeowners in your local market with a statistically high propensity to sell now.</p>
+                    <p>But we don't stop there. Data is just data. Verification is money.</p>
+                    <p>Once our AI identifies a high-propensity homeowner, we engage them via AI text and voice. We do not pass them to you until they have passed a Double-Verification Protocol:</p>
+                    <ul class="list-disc list-inside pl-4 space-y-1">
+                        <li><strong>Identity Verification:</strong> We confirm they own the specific address.</li>
+                        <li><strong>Intent Verification:</strong> The consumer must explicitly agree that they want to speak to a local Realtor.</li>
+                    </ul>
+                    <p>This is not a "lead." This is a middle-of-funnel conversation served on a platter. It is as close to a "hot transfer" as exists in this industry.</p>
+
+                    <h4 class="font-bold text-lg text-[--dark-blue-grey] mt-6">The "Blue Ocean" Opportunity</h4>
+                    <p>Because this is a high-intensity, high-cost verification process, we cannot offer this to everyone.</p>
+                    <p>Right now, we are looking for ONE partner to take the Entire Market in <span class="dma-location">Your Area</span>.</p>
+                    <p>This is a "Blue Ocean" opportunity. While your competitors are fighting over ZIP codes and shared leads, we are offering you exclusive access to every AI Propensity lead generated in your entire DMA.</p>
+                    <p class="mt-4">Sincerely,<br><strong>Jeff Brogger</strong><br>Director of B2B Marketing, Ylopo</p>
+                </div>
+
+                <div class="text-center mt-6">
+                    <button onclick="document.getElementById('full-letter').classList.remove('hidden'); this.style.display='none'" class="bg-[--dark-blue-grey] hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">
+                        READ FULL LETTER ▼
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem vs Solution -->
+        <section class="p-6 sm:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- The Problem -->
+                <div class="card p-8 rounded-xl border-t-8 border-gray-400 bg-gray-50 opacity-80">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-xl font-bold text-gray-700">The "Lead Hamster Wheel"</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><span class="mr-2 text-xl">🛑</span> Fighting for scraps in a crowded market.</li>
+                        <li class="flex items-start"><span class="mr-2 text-xl">🛑</span> Chasing 100 "ghosts" to find 1 seller.</li>
+                        <li class="flex items-start"><span class="mr-2 text-xl">🛑</span> Buying recycled data everyone else has.</li>
+                    </ul>
+                </div>
+
+                <!-- The Solution -->
+                <div class="card p-8 rounded-xl border-t-8 border-[--secondary-vibrant-green] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-[--secondary-vibrant-green] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">NEW TECHNOLOGY</div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <svg class="w-8 h-8 text-[--secondary-vibrant-green]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3 class="text-xl font-bold text-[--primary-dark-green]">The AI Propensity Lead</h3>
+                    </div>
+                    <ul class="space-y-3 text-[--dark-blue-grey] font-medium">
+                        <li class="flex items-start"><span class="mr-2 text-xl">✅</span> <b>Reverse the Funnel:</b> Verify intent <i>before</i> they hit CRM.</li>
+                        <li class="flex items-start"><span class="mr-2 text-xl">✅</span> <b>Blue Ocean:</b> Exclusive access to <span class="dma-location font-bold text-[--primary-dark-green]">Your Area</span>.</li>
+                        <li class="flex items-start"><span class="mr-2 text-xl">✅</span> <b>Middle-of-Funnel:</b> Served on a silver platter.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Double Verification Protocol -->
+        <section class="p-6 sm:p-12 bg-[#F3F6F8]">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-bold text-[--dark-blue-grey]">The Double-Verification Protocol</h3>
+                <p class="text-gray-600 mt-2">We don't just look at clicks. We analyze hundreds of data points.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center relative">
+                <!-- Connector Line (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-300 -z-10 transform -translate-y-1/2"></div>
+
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 relative z-10">
+                    <div class="w-16 h-16 bg-[--dark-blue-grey] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-4 border-white shadow">1</div>
+                    <h4 class="font-bold text-lg mb-2">Identify</h4>
+                    <p class="text-sm text-gray-600">Proprietary AI analyzes consumer data to find homeowners with high statistical propensity to sell.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 relative z-10">
+                    <div class="w-16 h-16 bg-[--primary-dark-green] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-4 border-white shadow">2</div>
+                    <h4 class="font-bold text-lg mb-2">Engage</h4>
+                    <p class="text-sm text-gray-600">We engage them via AI text and voice immediately. No human effort required yet.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-2 border-[--accent-vibrant-orange] relative z-10 transform scale-105">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[--accent-vibrant-orange] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Payoff</div>
+                    <div class="w-16 h-16 bg-[--accent-vibrant-orange] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-4 border-white shadow">3</div>
+                    <h4 class="font-bold text-lg mb-2">Verify</h4>
+                    <p class="text-sm text-gray-600">
+                        1. <b>Identity Confirmed</b> (They own the home)<br>
+                        2. <b>Intent Confirmed</b> (They asked to speak to a Realtor)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Offer -->
+        <section class="p-6 sm:p-12">
+            <h3 class="text-3xl font-bold text-center text-[--dark-blue-grey] mb-2">The Case Study Proposal</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">We need a success story in <span class="dma-location font-bold">Your Area</span>. In exchange for your data, we are subsidizing your costs.</p>
+
+            <div class="card rounded-2xl overflow-hidden border border-gray-200 flex flex-col md:flex-row">
+                <!-- Left: Value Breakdown -->
+                <div class="p-8 md:w-1/2 flex flex-col justify-center bg-gray-50 border-r border-gray-100">
+                    
+                    <!-- Anchor Price -->
+                    <div class="mb-6 p-4 bg-white rounded-lg border border-gray-200 shadow-sm opacity-80">
+                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Standard Market Value</h4>
+                        <div class="text-3xl font-bold text-gray-400">$200 <span class="text-sm font-normal">/ lead</span></div>
+                        <p class="text-xs text-gray-400 mt-1 leading-tight">Industry avg. for double-verified seller leads</p>
+                    </div>
+
+                    <div class="flex items-end space-x-4 mb-2">
+                        <div class="flex-1">
+                            <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Retail Price</h4>
+                            <div class="text-2xl font-bold text-gray-400 strike-through">$50</div>
+                        </div>
+                        <div class="text-gray-300 pb-2 text-2xl">➔</div>
+                        <div class="flex-1">
+                            <h4 class="text-xs font-bold text-[--primary-dark-green] uppercase tracking-widest mb-1">Pilot Price</h4>
+                            <div class="text-5xl font-black text-[--secondary-vibrant-green]">$25</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xs text-center text-[--accent-vibrant-orange] font-bold mt-2 uppercase tracking-wide">50% Subsidy Applied</p>
+                </div>
+
+                <!-- Right: Savings & Terms -->
+                <div class="p-8 md:w-1/2 bg-[--dark-blue-grey] text-white flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-[--accent-vibrant-orange] opacity-10 rounded-full blur-2xl transform translate-x-10 -translate-y-10"></div>
+                    
+                    <h4 class="text-2xl font-bold mb-4 text-[--accent-vibrant-orange]">Your Impact</h4>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-[--secondary-vibrant-green]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Save approx. <span class="font-bold text-white ml-1">$15,000</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-[--secondary-vibrant-green]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Total Market Exclusivity
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-[--secondary-vibrant-green]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            6-Month Pilot Term
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements -->
+        <section class="p-6 sm:p-12 bg-gray-50 border-t border-gray-200">
+            <h3 class="text-2xl font-bold text-center text-[--dark-blue-grey] mb-6">Partner Acceptance Criteria</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <div class="font-bold text-[--secondary-vibrant-green] mb-1">VOLUME</div>
+                    <p class="text-sm">Must be capable of working 100-200 leads per month.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <div class="font-bold text-[--secondary-vibrant-green] mb-1">PROCESS</div>
+                    <p class="text-sm">Must have a nurture process (we will assist).</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <div class="font-bold text-[--secondary-vibrant-green] mb-1">FEEDBACK</div>
+                    <p class="text-sm">Must agree to "Case Study Clause" for data tracking.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Footer -->
+        <footer class="p-8 sm:p-12 text-center gradient-bg text-white rounded-b-2xl">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">THE "BLUE OCEAN" CLOSES SOON</h2>
+            <p class="mb-8 opacity-90 text-lg">Once this seat is filled, future access will be restricted to specific ZIP codes at full retail price ($50).</p>
+            
+            <a href="#" class="inline-block bg-[--accent-vibrant-orange] hover:bg-[#d4901f] text-white font-extrabold text-xl py-4 px-10 rounded-full shadow-xl transform transition hover:scale-105 border-2 border-white/20">
+                LOCK IN <span class="dma-location uppercase">YOUR AREA</span>
+            </a>
+
+            <div class="mt-10 flex items-center justify-center space-x-4 opacity-80">
+                <div class="text-right">
+                    <p class="font-bold">Jeff Brogger</p>
+                    <p class="text-sm">Director of B2B Marketing</p>
+                </div>
+                <div class="h-10 w-px bg-white/50"></div>
+                <img src="https://go.ylopo.com/l/923023/2024-09-24/2yc158/923023/1727222654DOG4OUhH/ylopo_logo.png" style="filter: brightness(0) invert(1);" alt="Ylopo" class="h-6 opacity-90">
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Dynamic Variable Script
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const dmaParam = urlParams.get('dma'); // Look for ?dma=value in URL
+            
+            // Determine text to display
+            // If dmaParam exists, use it. Otherwise default to "Your Area"
+            const dmaText = dmaParam ? decodeURIComponent(dmaParam) : "Your Area";
+            
+            // Find all elements with class 'dma-location' and update text
+            const elements = document.querySelectorAll('.dma-location');
+            elements.forEach(el => {
+                el.textContent = dmaText;
+            });
+
+            console.log(`DMA set to: ${dmaText}`);
+        });
+    </script>
+
+</body>
+</html>

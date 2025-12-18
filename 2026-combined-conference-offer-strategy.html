@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Ylopo & Maverick Conference Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            /* Exact Ylopo Brand Colors from Example */
+            --primary-dark-green: #198471;
+            --secondary-vibrant-green: #20ad95;
+            --tertiary-green: #7bc109;
+            --dark-blue-grey: #203a4f;
+            --mid-blue-accent: #3ea8d0;
+            --accent-vibrant-orange: #f7ad33;
+            --dark-orange-red: #e79919;
+            --bg-light: #F3F4F6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e5e7eb; /* Darker background for canvas pop */
+            color: var(--dark-blue-grey);
+        }
+
+        .ylopo-header-gradient {
+            background: linear-gradient(135deg, var(--dark-blue-grey) 0%, var(--primary-dark-green) 100%);
+        }
+
+        /* Grid Architecture for Perfect Alignment */
+        .infographic-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        /* Card Styles */
+        .pool-header {
+            background: white;
+            border-top: 6px solid var(--primary-dark-green);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border-radius: 0.5rem 0.5rem 0 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        /* Specific borders for different pools to differentiate */
+        .pool-a .pool-header { border-color: var(--primary-dark-green); }
+        .pool-b .pool-header { border-color: var(--secondary-vibrant-green); }
+        .pool-c .pool-header { border-color: var(--mid-blue-accent); }
+        .pool-d .pool-header { border-color: #9CA3AF; }
+
+        .prize-cell {
+            background: white;
+            padding: 1.25rem;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.2s;
+        }
+        
+        /* Row coloring for hierarchy */
+        .row-1st { background: linear-gradient(to bottom, #fffbeb, #ffffff); border-left: 4px solid #FCD34D; }
+        .row-2nd { background: #ffffff; border-left: 4px solid #E5E7EB; }
+        .row-3rd { background: #f9fafb; border-left: 4px solid #FDBA74; }
+
+        .prize-value {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+            font-size: 0.8rem;
+            color: #4B5563;
+        }
+
+        .rank-icon {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+    </style>
+</head>
+<body class="p-4 md:p-8 min-h-screen flex justify-center items-start">
+
+    <div class="max-w-[1600px] w-full bg-white shadow-2xl overflow-hidden rounded-xl">
+        
+        <!-- HEADER SECTION -->
+        <header class="ylopo-header-gradient text-white p-8 md:p-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                         <span class="bg-white/20 px-3 py-1 rounded text-xs font-bold tracking-widest uppercase">Internal Proposal</span>
+                         <span class="text-white/60 text-xs tracking-wider">FY 2026 STRATEGY</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-2">Conference Offer Strategy</h1>
+                    <p class="text-xl text-white/90 font-light">"AI Growth & Acceleration" Giveaway Structure</p>
+                </div>
+                
+                <!-- Key Rule Callout -->
+                <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 max-w-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="info" class="w-6 h-6 text-[--accent-vibrant-orange] shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-[--accent-vibrant-orange] uppercase text-sm mb-1">The "Winner Pays" Rule</h3>
+                            <p class="text-xs leading-relaxed text-white/90">
+                                All winners (regardless of tier) cover the Base Ylopo Tech Fee (~$500/mo) + Media Spend. 
+                                The prize covers the "Add-ons": Maverick SaaS, AI² Fees, Setup, & Coaching.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <div class="p-6 md:p-8 bg-gray-50">
+
+            <!-- GRID HEADER (POOLS) -->
+            <div class="infographic-grid mb-4">
+                
+                <!-- POOL A HEADER -->
+                <div class="pool-a">
+                    <div class="pool-header relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-2 opacity-5">
+                            <i data-lucide="crown" class="w-24 h-24"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-black text-[--dark-blue-grey]">POOL A</h2>
+                            <p class="text-[--primary-dark-green] font-bold text-sm tracking-wider uppercase mb-1">"The Whale"</p>
+                            <span class="inline-block bg-[--dark-blue-grey] text-white text-xs px-2 py-1 rounded font-bold">2,000+ Attendees</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <p class="text-xs text-gray-500 font-bold uppercase">Total Prize Pool</p>
+                            <p class="text-3xl font-black text-[--primary-dark-green]">$56,000+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POOL B HEADER -->
+                <div class="pool-b">
+                    <div class="pool-header">
+                        <div>
+                            <h2 class="text-2xl font-black text-[--dark-blue-grey]">POOL B</h2>
+                            <p class="text-[--secondary-vibrant-green] font-bold text-sm tracking-wider uppercase mb-1">"The Showstopper"</p>
+                            <span class="inline-block bg-gray-600 text-white text-xs px-2 py-1 rounded font-bold">1,500 - 1,999</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <p class="text-xs text-gray-500 font-bold uppercase">Total Prize Pool</p>
+                            <p class="text-3xl font-black text-[--secondary-vibrant-green]">$28,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POOL C HEADER -->
+                <div class="pool-c">
+                    <div class="pool-header">
+                        <div>
+                            <h2 class="text-2xl font-black text-[--dark-blue-grey]">POOL C</h2>
+                            <p class="text-[--mid-blue-accent] font-bold text-sm tracking-wider uppercase mb-1">"The Crowd Pleaser"</p>
+                            <span class="inline-block bg-gray-400 text-white text-xs px-2 py-1 rounded font-bold">1,000 - 1,499</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <p class="text-xs text-gray-500 font-bold uppercase">Total Prize Pool</p>
+                            <p class="text-3xl font-black text-[--mid-blue-accent]">$14,500</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POOL D HEADER -->
+                <div class="pool-d">
+                    <div class="pool-header bg-gray-100 border-gray-400">
+                        <div>
+                            <h2 class="text-2xl font-black text-gray-600">POOL D</h2>
+                            <p class="text-gray-500 font-bold text-sm tracking-wider uppercase mb-1">"The Regional"</p>
+                            <span class="inline-block bg-gray-400 text-white text-xs px-2 py-1 rounded font-bold">&lt; 1,000</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <p class="text-xs text-gray-500 font-bold uppercase">Total Prize Pool</p>
+                            <p class="text-3xl font-black text-gray-600">$8,000</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ROW: 1ST PLACE -->
+            <div class="mb-2 flex items-center gap-2">
+                <div class="h-[1px] bg-gray-300 flex-1"></div>
+                <div class="text-sm font-bold text-[--dark-orange-red] uppercase tracking-widest flex items-center gap-2">
+                    <i data-lucide="trophy" class="w-4 h-4"></i> 1st Place Winners
+                </div>
+                <div class="h-[1px] bg-gray-300 flex-1"></div>
+            </div>
+            
+            <div class="infographic-grid mb-6">
+                <!-- A: 1st -->
+                <div class="prize-cell row-1st shadow-lg transform hover:-translate-y-1">
+                    <div class="text-[--dark-orange-red] text-xs font-bold uppercase mb-1">The Dominator Stack</div>
+                    <div class="prize-value text-2xl text-[--dark-blue-grey] mb-3">$32,000 <span class="text-xs font-normal text-gray-400 align-top">Value</span></div>
+                    <ul class="check-list">
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Maverick:</strong> 12 Mo Rev Accel Pro (Lg)</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Ylopo:</strong> 12 Mo AI² (Voice+Text)</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Setup:</strong> Waived</li>
+                        <li class="font-bold text-[--dark-orange-red]"><i data-lucide="star" class="w-3 h-3"></i> Bonus: 1-on-1 RIR Strategy</li>
+                    </ul>
+                </div>
+                <!-- B: 1st -->
+                <div class="prize-cell row-1st shadow-md">
+                    <div class="text-[--dark-orange-red] text-xs font-bold uppercase mb-1">The Accelerator Stack</div>
+                    <div class="prize-value text-2xl text-[--dark-blue-grey] mb-3">$16,000 <span class="text-xs font-normal text-gray-400 align-top">Value</span></div>
+                    <ul class="check-list">
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Maverick:</strong> 6 Mo Rev Accel Pro (Lg)</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Ylopo:</strong> 6 Mo AI² Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Setup:</strong> Waived</li>
+                        <li class="font-bold text-[--dark-orange-red]"><i data-lucide="star" class="w-3 h-3"></i> Bonus: RIR Mastermind</li>
+                    </ul>
+                </div>
+                <!-- C: 1st -->
+                <div class="prize-cell row-1st shadow-sm">
+                    <div class="text-[--dark-orange-red] text-xs font-bold uppercase mb-1">The Momentum Stack</div>
+                    <div class="prize-value text-2xl text-[--dark-blue-grey] mb-3">$8,000 <span class="text-xs font-normal text-gray-400 align-top">Value</span></div>
+                    <ul class="check-list">
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Maverick:</strong> 3 Mo Rev Accel Pro (Med)</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Ylopo:</strong> 3 Mo AI² Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Setup:</strong> Waived</li>
+                        <li class="font-bold text-[--dark-orange-red]"><i data-lucide="star" class="w-3 h-3"></i> Bonus: RIR Mastermind</li>
+                    </ul>
+                </div>
+                <!-- D: 1st -->
+                <div class="prize-cell row-1st bg-opacity-50">
+                    <div class="text-[--dark-orange-red] text-xs font-bold uppercase mb-1">The Launchpad Stack</div>
+                    <div class="prize-value text-2xl text-[--dark-blue-grey] mb-3">$4,500 <span class="text-xs font-normal text-gray-400 align-top">Value</span></div>
+                    <ul class="check-list">
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Maverick:</strong> 1 Mo Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Ylopo:</strong> 1 Mo AI² Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--primary-dark-green]"></i> <strong>Setup:</strong> Waived</li>
+                        <li class="font-bold text-[--dark-orange-red]"><i data-lucide="star" class="w-3 h-3"></i> Bonus: RIR Mastermind</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ROW: 2ND PLACE -->
+            <div class="mb-2 flex items-center gap-2">
+                <div class="h-[1px] bg-gray-300 flex-1"></div>
+                <div class="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                    <i data-lucide="medal" class="w-4 h-4"></i> 2nd Place Winners
+                </div>
+                <div class="h-[1px] bg-gray-300 flex-1"></div>
+            </div>
+
+            <div class="infographic-grid mb-6">
+                <!-- A: 2nd -->
+                <div class="prize-cell row-2nd">
+                    <div class="text-gray-500 text-xs font-bold uppercase mb-1">The Accelerator Stack</div>
+                    <div class="prize-value text-xl text-gray-700 mb-2">$16,000</div>
+                    <ul class="check-list">
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Maverick: 6 Mo Pro (Lg)</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Ylopo: 6 Mo AI² Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Setup: Waived</li>
+                    </ul>
+                </div>
+                <!-- B: 2nd -->
+                <div class="prize-cell row-2nd">
+                    <div class="text-gray-500 text-xs font-bold uppercase mb-1">The Momentum Stack</div>
+                    <div class="prize-value text-xl text-gray-700 mb-2">$8,000</div>
+                    <ul class="check-list">
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Maverick: 3 Mo Pro (Med)</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Ylopo: 3 Mo AI² Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Setup: Waived</li>
+                    </ul>
+                </div>
+                <!-- C: 2nd -->
+                <div class="prize-cell row-2nd">
+                    <div class="text-gray-500 text-xs font-bold uppercase mb-1">The Launchpad Stack</div>
+                    <div class="prize-value text-xl text-gray-700 mb-2">$4,000</div>
+                    <ul class="check-list">
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Maverick: 1 Mo Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Ylopo: 1 Mo AI² Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Setup: Waived</li>
+                    </ul>
+                </div>
+                <!-- D: 2nd -->
+                <div class="prize-cell row-2nd">
+                    <div class="text-gray-500 text-xs font-bold uppercase mb-1">The Integration Stack</div>
+                    <div class="prize-value text-xl text-gray-700 mb-2">$2,500</div>
+                    <ul class="check-list">
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Maverick: Partner Pricing</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-gray-400"></i> Setup: Waived</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ROW: 3RD PLACE -->
+            <div class="mb-2 flex items-center gap-2">
+                <div class="h-[1px] bg-gray-300 flex-1"></div>
+                <div class="text-sm font-bold text-[--accent-vibrant-orange] uppercase tracking-widest flex items-center gap-2">
+                    <i data-lucide="award" class="w-4 h-4"></i> 3rd Place Winners
+                </div>
+                <div class="h-[1px] bg-gray-300 flex-1"></div>
+            </div>
+
+            <div class="infographic-grid">
+                <!-- A: 3rd -->
+                <div class="prize-cell row-3rd">
+                    <div class="text-[--accent-vibrant-orange] text-xs font-bold uppercase mb-1">The Starter Stack</div>
+                    <div class="prize-value text-lg text-gray-600 mb-2">$8,000</div>
+                    <ul class="check-list opacity-80">
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Maverick: 3 Mo Pro (Med)</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Ylopo: 3 Mo AI² Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Setup: Waived</li>
+                    </ul>
+                </div>
+                <!-- B: 3rd -->
+                <div class="prize-cell row-3rd">
+                    <div class="text-[--accent-vibrant-orange] text-xs font-bold uppercase mb-1">The Launchpad Stack</div>
+                    <div class="prize-value text-lg text-gray-600 mb-2">$4,000</div>
+                    <ul class="check-list opacity-80">
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Maverick: 1 Mo Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Ylopo: 1 Mo AI² Free</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Setup: Waived</li>
+                    </ul>
+                </div>
+                <!-- C: 3rd -->
+                <div class="prize-cell row-3rd">
+                    <div class="text-[--accent-vibrant-orange] text-xs font-bold uppercase mb-1">The Integration Stack</div>
+                    <div class="prize-value text-lg text-gray-600 mb-2">$2,500</div>
+                    <ul class="check-list opacity-80">
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Maverick: Partner Pricing</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Setup: Waived</li>
+                    </ul>
+                </div>
+                <!-- D: 3rd -->
+                <div class="prize-cell row-3rd">
+                    <div class="text-[--accent-vibrant-orange] text-xs font-bold uppercase mb-1">The Setup Scholarship</div>
+                    <div class="prize-value text-lg text-gray-600 mb-2">$1,000</div>
+                    <ul class="check-list opacity-80">
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Maverick: Setup Waived</li>
+                        <li><i data-lucide="check" class="w-3 h-3 text-[--accent-vibrant-orange]"></i> Ylopo: Setup 50% Off</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER: EVERYONE ELSE STRATEGY -->
+        <div class="bg-[--dark-blue-grey] text-white p-8">
+            <div class="border-2 border-dashed border-[--primary-dark-green] bg-[--dark-blue-grey] rounded-xl p-6 relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[--primary-dark-green] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
+                    The "Everyone Else" Strategy (Consolation)
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8 mt-4">
+                    <div class="md:w-1/3 text-center md:text-left">
+                        <h3 class="text-2xl font-black text-white mb-2">The "Conference Insider" Bundle</h3>
+                        <p class="text-gray-300 text-sm">For every entrant who did not place 1st, 2nd, or 3rd.</p>
+                    </div>
+                    
+                    <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white/5 p-4 rounded-lg flex items-center gap-4 border border-white/10">
+                            <div class="bg-[--accent-vibrant-orange] p-3 rounded-full text-[--dark-blue-grey]">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-lg">$2,500 Value</div>
+                                <div class="text-xs text-gray-400 uppercase">Waived Setup Fees</div>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-lg flex items-center gap-4 border border-white/10">
+                            <div class="bg-[--secondary-vibrant-green] p-3 rounded-full text-white">
+                                <i data-lucide="percent" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-lg">Partner Pricing</div>
+                                <div class="text-xs text-gray-400 uppercase">Intro Offer Unlock</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                     <span class="text-red-300 text-xs font-bold uppercase tracking-widest bg-red-900/30 px-3 py-1 rounded">
+                         <i data-lucide="clock" class="w-3 h-3 inline mr-1"></i> Condition: Must activate within 21 days
+                     </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.lucide) {
+                lucide.createIcons();
+            } else {
+                 setTimeout(() => { if (window.lucide) lucide.createIcons(); }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>

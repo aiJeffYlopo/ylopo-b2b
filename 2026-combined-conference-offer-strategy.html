@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            /* Exact Ylopo Brand Colors */
+            /* Exact Ylopo Brand Colors from Example */
             --primary-dark-green: #198471;
             --secondary-vibrant-green: #20ad95;
             --tertiary-green: #7bc109;
@@ -22,7 +22,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #e5e7eb;
+            background-color: #e5e7eb; /* Darker background for canvas pop */
             color: var(--dark-blue-grey);
         }
 
@@ -30,12 +30,12 @@
             background: linear-gradient(135deg, var(--dark-blue-grey) 0%, var(--primary-dark-green) 100%);
         }
 
-        /* Grid Architecture */
+        /* Grid Architecture for Perfect Alignment */
         .infographic-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.25rem;
-            align-items: stretch;
+            grid-template-columns: repeat(4, 1fr); /* Enforce 4 equal columns */
+            gap: 1.25rem; /* Increased gap for separation */
+            align-items: stretch; /* Force all cards in a row to be equal height */
         }
 
         /* Card Styles */
@@ -52,6 +52,7 @@
             height: 100%;
         }
 
+        /* Specific borders for different pools to differentiate */
         .pool-a .pool-header { border-color: var(--primary-dark-green); }
         .pool-b .pool-header { border-color: var(--secondary-vibrant-green); }
         .pool-c .pool-header { border-color: var(--mid-blue-accent); }
@@ -65,10 +66,11 @@
             flex-direction: column;
             position: relative;
             transition: transform 0.2s;
-            height: 100%;
-            min-width: 0;
+            height: 100%; /* Fill grid cell height */
+            min-width: 0; /* Critical for CSS Grid to allow text wrapping inside */
         }
         
+        /* Row coloring for hierarchy */
         .row-1st { background: linear-gradient(to bottom, #fffbeb, #ffffff); border-left: 4px solid #FCD34D; }
         .row-2nd { background: #ffffff; border-left: 4px solid #E5E7EB; }
         .row-3rd { background: #f9fafb; border-left: 4px solid #FDBA74; }
@@ -89,13 +91,13 @@
             margin: 0 2px;
         }
 
-        /* Math Breakdown Styling */
+        /* Updated Math Breakdown to Wrap */
         .math-breakdown {
             font-size: 0.7rem;
             color: #4B5563;
             font-family: monospace;
             margin-bottom: 1rem;
-            white-space: normal;
+            white-space: normal; /* Allow wrapping */
             line-height: 1.4;
             background-color: #F3F4F6;
             padding: 0.5rem;
@@ -128,13 +130,23 @@
             color: #374151;
         }
 
+        .rank-icon {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
     </style>
 </head>
 <body class="p-4 md:p-8 min-h-screen flex justify-center items-start">
 
     <div class="max-w-[1600px] w-full bg-white shadow-2xl overflow-hidden rounded-xl">
         
-        <!-- HEADER -->
+        <!-- HEADER SECTION -->
         <header class="ylopo-header-gradient text-white p-8 md:p-10">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex-1">
@@ -145,7 +157,8 @@
                     <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-2">Conference Offer Strategy</h1>
                     <p class="text-xl text-white/90 font-light">"AI Growth & Acceleration" Giveaway Structure</p>
                 </div>
-                <!-- Rules Callout -->
+                
+                <!-- Key Rule Callout -->
                 <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 max-w-lg">
                     <div class="flex items-start gap-3">
                         <i data-lucide="info" class="w-6 h-6 text-[--accent-vibrant-orange] shrink-0 mt-1"></i>
@@ -161,15 +174,18 @@
             </div>
         </header>
 
-        <!-- MAIN CONTENT -->
+        <!-- MAIN CONTENT AREA -->
         <div class="p-6 md:p-8 bg-gray-50">
 
-            <!-- POOL HEADERS -->
+            <!-- GRID HEADER (POOLS) -->
             <div class="infographic-grid mb-4">
-                <!-- POOL A -->
+                
+                <!-- POOL A HEADER -->
                 <div class="pool-a">
                     <div class="pool-header relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-2 opacity-5"><i data-lucide="crown" class="w-24 h-24"></i></div>
+                        <div class="absolute top-0 right-0 p-2 opacity-5">
+                            <i data-lucide="crown" class="w-24 h-24"></i>
+                        </div>
                         <div>
                             <h2 class="text-2xl font-black text-[--dark-blue-grey]">POOL A</h2>
                             <p class="text-[--primary-dark-green] font-bold text-sm tracking-wider uppercase mb-1">"The Whale"</p>
@@ -181,7 +197,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- POOL B -->
+
+                <!-- POOL B HEADER -->
                 <div class="pool-b">
                     <div class="pool-header">
                         <div>
@@ -195,7 +212,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- POOL C -->
+
+                <!-- POOL C HEADER -->
                 <div class="pool-c">
                     <div class="pool-header">
                         <div>
@@ -209,7 +227,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- POOL D -->
+
+                <!-- POOL D HEADER -->
                 <div class="pool-d">
                     <div class="pool-header bg-gray-100 border-gray-400">
                         <div>
@@ -223,12 +242,15 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <!-- ROW: 1ST PLACE -->
             <div class="mb-2 flex items-center gap-2">
                 <div class="h-[1px] bg-gray-300 flex-1"></div>
-                <div class="text-sm font-bold text-[--dark-orange-red] uppercase tracking-widest flex items-center gap-2"><i data-lucide="trophy" class="w-4 h-4"></i> 1st Place Winner</div>
+                <div class="text-sm font-bold text-[--dark-orange-red] uppercase tracking-widest flex items-center gap-2">
+                    <i data-lucide="trophy" class="w-4 h-4"></i> 1st Place Winner
+                </div>
                 <div class="h-[1px] bg-gray-300 flex-1"></div>
             </div>
             
@@ -302,7 +324,9 @@
             <!-- ROW: 2ND PLACE -->
             <div class="mb-2 flex items-center gap-2">
                 <div class="h-[1px] bg-gray-300 flex-1"></div>
-                <div class="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2"><i data-lucide="medal" class="w-4 h-4"></i> 2nd Place Winner</div>
+                <div class="text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center gap-2">
+                    <i data-lucide="medal" class="w-4 h-4"></i> 2nd Place Winner
+                </div>
                 <div class="h-[1px] bg-gray-300 flex-1"></div>
             </div>
 
@@ -372,7 +396,9 @@
             <!-- ROW: 3RD PLACE -->
             <div class="mb-2 flex items-center gap-2">
                 <div class="h-[1px] bg-gray-300 flex-1"></div>
-                <div class="text-sm font-bold text-[--accent-vibrant-orange] uppercase tracking-widest flex items-center gap-2"><i data-lucide="award" class="w-4 h-4"></i> 3rd Place Winner</div>
+                <div class="text-sm font-bold text-[--accent-vibrant-orange] uppercase tracking-widest flex items-center gap-2">
+                    <i data-lucide="award" class="w-4 h-4"></i> 3rd Place Winner
+                </div>
                 <div class="h-[1px] bg-gray-300 flex-1"></div>
             </div>
 
@@ -472,15 +498,15 @@
                     <div class="md:w-7/12 flex justify-center">
                         <div class="prize-cell text-left max-w-sm w-full shadow-2xl border-4 border-[--primary-dark-green]">
                             <div class="text-[--primary-dark-green] text-xs font-bold uppercase mb-1">The Conference Insider Bundle</div>
-                            <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $19,700 <sup>Value</sup></div>
+                            <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $20,300 <sup>Value</sup></div>
                             <div class="math-breakdown">
                                 <div class="math-row"><span>Mav Intro:</span> <span>$1,450/mo x 12</span></div>
-                                <div class="math-row"><span>Ylopo:</span> <span>$25/mo x 12</span></div>
+                                <div class="math-row"><span>Ylopo:</span> <span>$75/mo x 12</span></div>
                                 <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                             </div>
                             <ul class="check-list">
                                 <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Mav Intro Pricing:</strong> Intro Offer Unlock (12 Mo Contract)</span></li>
-                                <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Ylopo AI²:</strong> $25/mo Off (12 Mos)</span></li>
+                                <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Ylopo AI²:</strong> $75/mo Off (12 Mos)</span></li>
                                 <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                             </ul>
                         </div>

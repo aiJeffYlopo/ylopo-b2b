@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 Ylopo & Maverick Conference Proposal</title>
+    <title>2026 Ylopo & Maverick "AI Growth" Giveaway</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            /* Exact Ylopo Brand Colors from Example */
+            /* Exact Ylopo Brand Colors */
             --primary-dark-green: #198471;
             --secondary-vibrant-green: #20ad95;
             --tertiary-green: #7bc109;
@@ -22,7 +22,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #e5e7eb; /* Darker background for canvas pop */
+            background-color: #e5e7eb;
             color: var(--dark-blue-grey);
         }
 
@@ -30,12 +30,24 @@
             background: linear-gradient(135deg, var(--dark-blue-grey) 0%, var(--primary-dark-green) 100%);
         }
 
-        /* Grid Architecture for Perfect Alignment */
+        /* Grid Architecture */
         .infographic-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Enforce 4 equal columns */
-            gap: 1.25rem; /* Increased gap for separation */
-            align-items: stretch; /* Force all cards in a row to be equal height */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            align-items: stretch;
+        }
+        
+        @media (max-width: 1024px) {
+            .infographic-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .infographic-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Card Styles */
@@ -52,7 +64,6 @@
             height: 100%;
         }
 
-        /* Specific borders for different pools to differentiate */
         .pool-a .pool-header { border-color: var(--primary-dark-green); }
         .pool-b .pool-header { border-color: var(--secondary-vibrant-green); }
         .pool-c .pool-header { border-color: var(--mid-blue-accent); }
@@ -66,11 +77,10 @@
             flex-direction: column;
             position: relative;
             transition: transform 0.2s;
-            height: 100%; /* Fill grid cell height */
-            min-width: 0; /* Critical for CSS Grid to allow text wrapping inside */
+            height: 100%;
+            min-width: 0;
         }
         
-        /* Row coloring for hierarchy */
         .row-1st { background: linear-gradient(to bottom, #fffbeb, #ffffff); border-left: 4px solid #FCD34D; }
         .row-2nd { background: #ffffff; border-left: 4px solid #E5E7EB; }
         .row-3rd { background: #f9fafb; border-left: 4px solid #FDBA74; }
@@ -80,7 +90,7 @@
             font-weight: 800;
             letter-spacing: -0.02em;
             line-height: 1;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
         
         .prize-value sup {
@@ -91,13 +101,29 @@
             margin: 0 2px;
         }
 
-        /* Updated Math Breakdown to Wrap */
+        /* Cash Alternative Styling */
+        .cash-alt {
+            font-size: 0.65rem;
+            font-family: monospace;
+            background-color: #f3f4f6;
+            color: #6b7280;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            border: 1px dashed #d1d5db;
+            display: inline-block;
+        }
+        .cash-alt span {
+            color: #374151;
+            font-weight: 700;
+        }
+
         .math-breakdown {
             font-size: 0.7rem;
             color: #4B5563;
             font-family: monospace;
             margin-bottom: 1rem;
-            white-space: normal; /* Allow wrapping */
+            white-space: normal;
             line-height: 1.4;
             background-color: #F3F4F6;
             padding: 0.5rem;
@@ -130,43 +156,49 @@
             color: #374151;
         }
 
-        .rank-icon {
-            position: absolute;
-            top: -10px;
-            right: 10px;
-            background: white;
-            border-radius: 50%;
-            padding: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* Legal Detail Toggle */
+        details > summary {
+            list-style: none;
+            cursor: pointer;
         }
-
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
-<body class="p-4 md:p-8 min-h-screen flex justify-center items-start">
+<body class="p-2 md:p-8 min-h-screen flex flex-col items-center">
 
-    <div class="max-w-[1600px] w-full bg-white shadow-2xl overflow-hidden rounded-xl">
+    <!-- LEGAL COMPLIANCE BANNER -->
+    <div class="w-full max-w-[1600px] bg-black text-white text-[10px] md:text-xs py-2 px-4 text-center font-mono uppercase tracking-widest rounded-t-xl">
+        No Purchase Necessary to Enter or Win. A Purchase will not increase your chances of winning. Void where prohibited.
+    </div>
+
+    <div class="max-w-[1600px] w-full bg-white shadow-2xl overflow-hidden rounded-b-xl mb-12">
         
         <!-- HEADER SECTION -->
-        <header class="ylopo-header-gradient text-white p-8 md:p-10">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <header class="ylopo-header-gradient text-white p-6 md:p-10">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
                 <div class="flex-1">
-                    <div class="flex items-center gap-3 mb-2">
-                         <span class="bg-white/20 px-3 py-1 rounded text-xs font-bold tracking-widest uppercase">Internal Proposal</span>
+                    <div class="flex flex-wrap items-center gap-3 mb-2">
+                         <span class="bg-white/20 px-3 py-1 rounded text-xs font-bold tracking-widest uppercase">Official Giveaway</span>
                          <span class="text-white/60 text-xs tracking-wider">FY 2026 STRATEGY</span>
                     </div>
-                    <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-2">Conference Offer Strategy</h1>
-                    <p class="text-xl text-white/90 font-light">"AI Growth & Acceleration" Giveaway Structure</p>
+                    <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-2">AI Growth & Acceleration</h1>
+                    <p class="text-lg md:text-xl text-white/90 font-light">Conference Giveaway Structure & Prize Pools</p>
                 </div>
                 
-                <!-- Key Rule Callout -->
-                <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 max-w-lg">
+                <!-- Updated "Winner Pays" Rule Callout -->
+                <div class="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20 max-w-xl w-full">
                     <div class="flex items-start gap-3">
-                        <i data-lucide="info" class="w-6 h-6 text-[--accent-vibrant-orange] shrink-0 mt-1"></i>
+                        <i data-lucide="alert-triangle" class="w-6 h-6 text-[--accent-vibrant-orange] shrink-0 mt-1"></i>
                         <div>
-                            <h3 class="font-bold text-[--accent-vibrant-orange] uppercase text-sm mb-1">The "Winner Pays" Rule</h3>
+                            <h3 class="font-bold text-[--accent-vibrant-orange] uppercase text-sm mb-1">Prize Condition: "Winner Pays Base"</h3>
                             <p class="text-xs leading-relaxed text-white/90">
-                                All winners (regardless of tier) cover the Base Ylopo Tech Fee (~$500/mo) + Media Spend. 
-                                The prize covers the "Add-ons": Maverick SaaS, AI² Fees, Setup, & Coaching.
+                                Prizes listed are <strong>Service Credits</strong> for "Add-ons" (Maverick SaaS, AI², Setup, Coaching).
+                                <br>
+                                <span class="block mt-1 pt-1 border-t border-white/20">
+                                    <strong>Requirement:</strong> Winners must maintain the <strong>Ylopo Base Tech Platform (~$500/mo)</strong> and fund their own <strong>Media Spend</strong>.
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -175,7 +207,7 @@
         </header>
 
         <!-- MAIN CONTENT AREA -->
-        <div class="p-6 md:p-8 bg-gray-50">
+        <div class="p-4 md:p-8 bg-gray-50">
 
             <!-- GRID HEADER (POOLS) -->
             <div class="infographic-grid mb-4">
@@ -191,10 +223,6 @@
                             <p class="text-[--primary-dark-green] font-bold text-sm tracking-wider uppercase mb-1">"The Whale"</p>
                             <span class="inline-block bg-[--dark-blue-grey] text-white text-xs px-2 py-1 rounded font-bold">2,000+ Attendees</span>
                         </div>
-                        <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-xs text-gray-500 font-bold uppercase">Total Prize Pool</p>
-                            <p class="text-3xl font-black text-[--primary-dark-green]">$102,400</p>
-                        </div>
                     </div>
                 </div>
 
@@ -205,10 +233,6 @@
                             <h2 class="text-2xl font-black text-[--dark-blue-grey]">POOL B</h2>
                             <p class="text-[--secondary-vibrant-green] font-bold text-sm tracking-wider uppercase mb-1">"The Showstopper"</p>
                             <span class="inline-block bg-gray-600 text-white text-xs px-2 py-1 rounded font-bold">1,500 - 1,999</span>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-xs text-gray-500 font-bold uppercase">Total Prize Pool</p>
-                            <p class="text-3xl font-black text-[--secondary-vibrant-green]">$68,600</p>
                         </div>
                     </div>
                 </div>
@@ -221,10 +245,6 @@
                             <p class="text-[--mid-blue-accent] font-bold text-sm tracking-wider uppercase mb-1">"The Crowd Pleaser"</p>
                             <span class="inline-block bg-gray-400 text-white text-xs px-2 py-1 rounded font-bold">1,000 - 1,499</span>
                         </div>
-                        <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-xs text-gray-500 font-bold uppercase">Total Prize Pool</p>
-                            <p class="text-3xl font-black text-[--mid-blue-accent]">$43,600</p>
-                        </div>
                     </div>
                 </div>
 
@@ -235,10 +255,6 @@
                             <h2 class="text-2xl font-black text-gray-600">POOL D</h2>
                             <p class="text-gray-500 font-bold text-sm tracking-wider uppercase mb-1">"The Regional"</p>
                             <span class="inline-block bg-gray-400 text-white text-xs px-2 py-1 rounded font-bold">&lt; 1,000</span>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <p class="text-xs text-gray-500 font-bold uppercase">Total Prize Pool</p>
-                            <p class="text-3xl font-black text-gray-600">$26,900</p>
                         </div>
                     </div>
                 </div>
@@ -258,7 +274,9 @@
                 <!-- A: 1st (100%) -->
                 <div class="prize-cell row-1st shadow-lg transform hover:-translate-y-1">
                     <div class="text-[--dark-orange-red] text-xs font-bold uppercase mb-1">The Dominator Stack</div>
-                    <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $46,200 <sup>Value</sup></div>
+                    <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $46,200 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$1,000 Check</span></div>
+                    
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$2,575/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$900/mo x 12</span></div>
@@ -267,14 +285,15 @@
                     <ul class="check-list">
                         <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo Free (Pro Lg)</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo Free AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                         <li class="font-bold text-[--dark-orange-red]"><i data-lucide="star" class="w-4 h-4 shrink-0"></i> <span><strong>Bonus:</strong> 1-on-1 RIR Strategy</span></li>
                     </ul>
                 </div>
                 <!-- B: 1st (75%) -->
                 <div class="prize-cell row-1st shadow-md">
                     <div class="text-[--dark-orange-red] text-xs font-bold uppercase mb-1">The Accelerator Stack</div>
-                    <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $33,300 <sup>Value</sup></div>
+                    <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $33,300 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$500 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$1,931/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$675/mo x 12</span></div>
@@ -283,14 +302,15 @@
                     <ul class="check-list">
                         <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 75% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 75% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                         <li class="font-bold text-[--dark-orange-red]"><i data-lucide="star" class="w-4 h-4 shrink-0"></i> <span><strong>Bonus:</strong> RIR Mastermind</span></li>
                     </ul>
                 </div>
                 <!-- C: 1st (50%) -->
                 <div class="prize-cell row-1st shadow-sm">
                     <div class="text-[--dark-orange-red] text-xs font-bold uppercase mb-1">The Momentum Stack</div>
-                    <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $22,900 <sup>Value</sup></div>
+                    <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $22,900 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$250 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$1,288/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$450/mo x 12</span></div>
@@ -299,14 +319,15 @@
                     <ul class="check-list">
                         <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 50% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 50% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                         <li class="font-bold text-[--dark-orange-red]"><i data-lucide="star" class="w-4 h-4 shrink-0"></i> <span><strong>Bonus:</strong> RIR Mastermind</span></li>
                     </ul>
                 </div>
                 <!-- D: 1st (25%) -->
                 <div class="prize-cell row-1st bg-opacity-50">
                     <div class="text-[--dark-orange-red] text-xs font-bold uppercase mb-1">The Retention Stack</div>
-                    <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $12,400 <sup>Value</sup></div>
+                    <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $12,400 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$100 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$644/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$225/mo x 12</span></div>
@@ -315,7 +336,6 @@
                     <ul class="check-list">
                         <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 25% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 25% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                         <li class="font-bold text-[--dark-orange-red]"><i data-lucide="star" class="w-4 h-4 shrink-0"></i> <span><strong>Bonus:</strong> RIR Mastermind</span></li>
                     </ul>
                 </div>
@@ -334,61 +354,61 @@
                 <!-- A: 2nd (75%) -->
                 <div class="prize-cell row-2nd">
                     <div class="text-gray-500 text-xs font-bold uppercase mb-1">The Accelerator Stack</div>
-                    <div class="prize-value text-xl text-gray-700"><sup>Up to</sup> $33,300 <sup>Value</sup></div>
+                    <div class="prize-value text-xl text-gray-700"><sup>Up to</sup> $33,300 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$500 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$1,931/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$675/mo x 12</span></div>
-                        <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                     </div>
                     <ul class="check-list">
                         <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 75% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 75% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                     </ul>
                 </div>
                 <!-- B: 2nd (50%) -->
                 <div class="prize-cell row-2nd">
                     <div class="text-gray-500 text-xs font-bold uppercase mb-1">The Momentum Stack</div>
-                    <div class="prize-value text-xl text-gray-700"><sup>Up to</sup> $22,900 <sup>Value</sup></div>
+                    <div class="prize-value text-xl text-gray-700"><sup>Up to</sup> $22,900 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$250 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$1,288/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$450/mo x 12</span></div>
-                        <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                     </div>
                     <ul class="check-list">
                         <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 50% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 50% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                     </ul>
                 </div>
                 <!-- C: 2nd (25%) -->
                 <div class="prize-cell row-2nd">
                     <div class="text-gray-500 text-xs font-bold uppercase mb-1">The Retention Stack</div>
-                    <div class="prize-value text-xl text-gray-700"><sup>Up to</sup> $12,400 <sup>Value</sup></div>
+                    <div class="prize-value text-xl text-gray-700"><sup>Up to</sup> $12,400 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$100 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$644/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$225/mo x 12</span></div>
-                        <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                     </div>
                     <ul class="check-list">
                         <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 25% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 25% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                     </ul>
                 </div>
                 <!-- D: 2nd (15%) -->
                 <div class="prize-cell row-2nd">
                     <div class="text-gray-500 text-xs font-bold uppercase mb-1">The Launchpad Stack</div>
-                    <div class="prize-value text-xl text-gray-700"><sup>Up to</sup> $8,300 <sup>Value</sup></div>
+                    <div class="prize-value text-xl text-gray-700"><sup>Up to</sup> $8,300 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$50 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$386/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$135/mo x 12</span></div>
-                        <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                     </div>
                     <ul class="check-list">
                         <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 15% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 15% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-gray-400 shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                     </ul>
                 </div>
             </div>
@@ -406,61 +426,61 @@
                 <!-- A: 3rd (50%) -->
                 <div class="prize-cell row-3rd">
                     <div class="text-[--accent-vibrant-orange] text-xs font-bold uppercase mb-1">The Momentum Stack</div>
-                    <div class="prize-value text-lg text-gray-600"><sup>Up to</sup> $22,900 <sup>Value</sup></div>
+                    <div class="prize-value text-lg text-gray-600"><sup>Up to</sup> $22,900 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$250 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$1,288/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$450/mo x 12</span></div>
-                        <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                     </div>
                     <ul class="check-list opacity-80">
                         <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 50% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 50% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                     </ul>
                 </div>
                 <!-- B: 3rd (25%) -->
                 <div class="prize-cell row-3rd">
                     <div class="text-[--accent-vibrant-orange] text-xs font-bold uppercase mb-1">The Retention Stack</div>
-                    <div class="prize-value text-lg text-gray-600"><sup>Up to</sup> $12,400 <sup>Value</sup></div>
+                    <div class="prize-value text-lg text-gray-600"><sup>Up to</sup> $12,400 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$100 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$644/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$225/mo x 12</span></div>
-                        <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                     </div>
                     <ul class="check-list opacity-80">
                         <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 25% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 25% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                     </ul>
                 </div>
                 <!-- C: 3rd (15%) -->
                 <div class="prize-cell row-3rd">
                     <div class="text-[--accent-vibrant-orange] text-xs font-bold uppercase mb-1">The Launchpad Stack</div>
-                    <div class="prize-value text-lg text-gray-600"><sup>Up to</sup> $8,300 <sup>Value</sup></div>
+                    <div class="prize-value text-lg text-gray-600"><sup>Up to</sup> $8,300 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$50 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$386/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$135/mo x 12</span></div>
-                        <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                     </div>
                     <ul class="check-list opacity-80">
                         <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 15% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 15% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                     </ul>
                 </div>
                 <!-- D: 3rd (10%) -->
                 <div class="prize-cell row-3rd">
                     <div class="text-[--accent-vibrant-orange] text-xs font-bold uppercase mb-1">The Starter Stack</div>
-                    <div class="prize-value text-lg text-gray-600"><sup>Up to</sup> $6,200 <sup>Value</sup></div>
+                    <div class="prize-value text-lg text-gray-600"><sup>Up to</sup> $6,200 <sup>SaaS Value</sup></div>
+                    <div class="cash-alt">Or Cash Alternative: <span>$50 Check</span></div>
+
                     <div class="math-breakdown">
                         <div class="math-row"><span>Mav:</span> <span>$258/mo x 12</span></div>
                         <div class="math-row"><span>Ylopo:</span> <span>$90/mo x 12</span></div>
-                        <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                     </div>
                     <ul class="check-list opacity-80">
                         <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Maverick:</strong> 12 Mo 10% Off</span></li>
                         <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Ylopo:</strong> 12 Mo 10% Off AI²</span></li>
-                        <li><i data-lucide="check" class="w-4 h-4 text-[--accent-vibrant-orange] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                     </ul>
                 </div>
             </div>
@@ -471,22 +491,24 @@
         <div class="bg-[--dark-blue-grey] text-white p-8">
             <div class="border-2 border-dashed border-[--primary-dark-green] bg-[--dark-blue-grey] rounded-xl p-6 relative">
                 <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[--primary-dark-green] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
-                    The "Promotional Offer" Strategy
+                    Post-Show Sales Offer
                 </div>
                 
                 <div class="flex flex-col md:flex-row items-center justify-between gap-8 mt-4">
                     <div class="md:w-5/12 text-center md:text-left">
-                        <h3 class="text-2xl font-black text-white mb-4">The "Conference Insider" Bundle</h3>
+                        <h3 class="text-2xl font-black text-white mb-2">The "Conference Insider" Bundle</h3>
+                        <p class="text-xs text-white/50 uppercase font-bold tracking-widest mb-4">Non-Winner Promotional Offer</p>
                         
                         <div class="space-y-3 text-xs text-gray-300 leading-relaxed">
                             <p>
-                                <strong class="text-white">The Timeline:</strong> On the final day at 5 PM, the <span class="text-[--accent-vibrant-orange]">1st Place Winner</span> is announced. Immediately after, this promotional offer unlocks for all other participants.
+                                <strong class="text-white">Availability:</strong> This offer unlocks for all non-winning participants immediately after the 1st Place announcement.
                             </p>
                             <p>
-                                <strong class="text-white">How to Claim:</strong> You have ~21 days post-conference to book and attend a meeting with our sales team.
+                                <strong class="text-white">Terms:</strong> This is a sales offer, not a prize. Requires a standard service agreement. Must book/sign within ~21 days post-conference.
                             </p>
+                            
                             <div class="bg-white/10 p-3 rounded-lg border border-white/10 mt-2">
-                                <p class="text-[--secondary-vibrant-green] font-bold uppercase mb-1 text-[10px] tracking-wider">Increase Your Odds for 2nd/3rd Place:</p>
+                                <p class="text-[--secondary-vibrant-green] font-bold uppercase mb-1 text-[10px] tracking-wider">Increase Your Giveaway Entries:</p>
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>Book a demo: <strong class="text-white">+5 Entries</strong></li>
                                     <li>Attend a demo: <strong class="text-white">+20 Entries</strong></li>
@@ -497,7 +519,7 @@
                     
                     <div class="md:w-7/12 flex justify-center">
                         <div class="prize-cell text-left max-w-sm w-full shadow-2xl border-4 border-[--primary-dark-green]">
-                            <div class="text-[--primary-dark-green] text-xs font-bold uppercase mb-1">The Conference Insider Bundle</div>
+                            <div class="text-[--primary-dark-green] text-xs font-bold uppercase mb-1">Conference Insider Bundle</div>
                             <div class="prize-value text-2xl text-[--dark-blue-grey]"><sup>Up to</sup> $20,300 <sup>Value</sup></div>
                             <div class="math-breakdown">
                                 <div class="math-row"><span>Mav Intro:</span> <span>$1,450/mo x 12</span></div>
@@ -505,32 +527,39 @@
                                 <div class="math-row"><span>+ Setup:</span> <span>$2,000</span></div>
                             </div>
                             <ul class="check-list">
-                                <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Mav Intro Pricing:</strong> Intro Offer Unlock (12 Mo Contract)</span></li>
-                                <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Ylopo AI²:</strong> $75/mo Off (12 Mos)</span></li>
+                                <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Mav Intro Pricing:</strong> Intro Offer Unlock</span></li>
+                                <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Ylopo AI²:</strong> $75/mo Off</span></li>
                                 <li><i data-lucide="check" class="w-4 h-4 text-[--primary-dark-green] shrink-0"></i> <span><strong>Setup:</strong> Waived</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-6">
-                     <span class="text-red-300 text-xs font-bold uppercase tracking-widest bg-red-900/30 px-3 py-1 rounded">
-                         <i data-lucide="clock" class="w-3 h-3 inline mr-1"></i> Condition: Must activate within 21 days
-                     </span>
-                </div>
-
-                <!-- ASSUMPTIONS / FINE PRINT -->
-                <div class="mt-12 border-t border-white/10 pt-8 max-w-5xl mx-auto">
-                    <p class="text-xs text-gray-400 font-bold mb-3 uppercase tracking-widest">* Calculus based on the following assumptions:</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-2 gap-x-8 text-[11px] text-gray-500 font-mono leading-relaxed">
-                        <p>• Maverick Setup Fee = $500</p>
-                        <p>• Ylopo Setup Fee = $1,500</p>
-                        <p>• 1-on-1 RIR Strategy Session = $2,500 Coaching Value</p>
-                        <p class="md:col-span-2 lg:col-span-3">• Maverick Revenue Accelerator Pro Large Team Full Retail Pricing = $2,575/month</p>
-                        <p class="md:col-span-2 lg:col-span-3">• Ylopo AI² up to 20K Database Base Pricing = $900/month</p>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- OFFICIAL RULES & LEGAL DISCLAIMER -->
+            <div class="mt-8 border-t border-white/10 pt-6">
+                <details class="group">
+                    <summary class="flex items-center justify-between cursor-pointer text-xs text-gray-400 hover:text-white transition-colors">
+                        <span class="font-bold uppercase tracking-widest">Official Rules & Legal Disclaimers (Click to Expand)</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-[10px] text-gray-500 font-mono leading-relaxed bg-black/20 p-4 rounded-lg">
+                        <div>
+                            <p class="mb-2"><strong class="text-gray-300">NO PURCHASE NECESSARY:</strong> No purchase, payment, or signed service agreement is necessary to enter or win. A purchase or payment of any kind will not increase your chances of winning. Void where prohibited by law.</p>
+                            <p class="mb-2"><strong class="text-gray-300">ELIGIBILITY:</strong> Open to legal residents of the 50 United States and D.C., 18+, who are licensed real estate professionals and registered participants of the event.</p>
+                            <p class="mb-2"><strong class="text-gray-300">SPONSOR:</strong> Ylopo, LLC, 2272 S. Centinela Ave, Los Angeles, CA 90064.</p>
+                            <p><strong class="text-gray-300">ODDS:</strong> Odds of winning depend on the number of eligible entries received within each specific Pool.</p>
+                        </div>
+                        <div>
+                            <p class="mb-2"><strong class="text-gray-300">AMOE (Alternate Method of Entry):</strong> To enter without attending the conference or booking a demo, email <em>martech@ylopo.com</em> with your Name, Company, Email, Phone, Team Size, and CRM. See Official Rules for essay requirements to earn "Demo Bonus" entries without a meeting.</p>
+                            <p class="mb-2"><strong class="text-gray-300">PRIZE TERMS:</strong> Prizes are service credits. Winners must maintain an active Ylopo Base Tech Platform subscription and fund their own Media Spend. A Cash Alternative is available for all prizes as listed in the charts above.</p>
+                            <p><strong class="text-gray-300">TAXES:</strong> Winners are responsible for all taxes. IRS Form 1099-MISC will be issued for prizes/cash valued at $600 or more.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
         </div>
 
     </div>

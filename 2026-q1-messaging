@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Your CRM | Ylopo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for standard icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        ylopo: {
+                            DEFAULT: '#9def15', // The signature Ylopo neon green
+                            dark: '#0a0a0a',
+                            card: '#131313',
+                            border: '#262626'
+                        }
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .bg-grid {
+            background-size: 60px 60px;
+        }
+
+        .glow-effect {
+            position: absolute;
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(157, 239, 21, 0.08) 0%, rgba(10, 10, 10, 0) 70%);
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #9def15;
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden selection:bg-ylopo selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <img src="https://go.ylopo.com/l/923023/2024-09-24/2yc158/923023/1727222654DOG4OUhH/ylopo_logo.png" alt="Ylopo Logo" class="h-8">
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#" class="hover:text-white transition flex items-center gap-1">Platform <i class="fa-solid fa-chevron-down text-[10px] opacity-50"></i></a>
+                <a href="#" class="hover:text-white transition flex items-center gap-1">Solutions <i class="fa-solid fa-chevron-down text-[10px] opacity-50"></i></a>
+                <a href="#" class="hover:text-white transition">Pricing</a>
+                <a href="#" class="hover:text-white transition flex items-center gap-1">Resources <i class="fa-solid fa-chevron-down text-[10px] opacity-50"></i></a>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex items-center space-x-6">
+                <button class="text-gray-400 hover:text-white transition"><i class="fa-solid fa-moon"></i></button>
+                <a href="#" class="hidden md:block text-sm font-medium text-gray-300 hover:text-white transition">Sign in</a>
+                <a href="#demo" class="bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-200 transition">Request demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 lg:pt-52 lg:pb-32 bg-grid-pattern bg-grid border-b border-white/5">
+        <div class="glow-effect"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300 mb-8">
+                <span class="w-2 h-2 rounded-full bg-ylopo animate-pulse"></span>
+                The Modern Real Estate Tech Stack
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+                KEEP YOUR CRM.<br>
+                <span class="text-ylopo italic font-semibold">Get Rid of Everything Else.</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                You already have a CRM. What you don't want is the bloated, expensive "Frankenstein" tech stack you've had to build around it. It's time to cure your tech bloat and get back to basics.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#demo" class="w-full sm:w-auto bg-white text-black px-8 py-4 rounded-full text-base font-semibold hover:bg-gray-200 transition flex items-center justify-center gap-2">
+                    Request a demo <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <a href="#overview" class="w-full sm:w-auto bg-transparent border border-white/20 text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-white/5 transition flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-circle-play"></i> Watch overview
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem vs Solution Section -->
+    <section class="py-24 bg-ylopo-dark relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+                
+                <!-- The Challenge -->
+                <div class="space-y-8">
+                    <div class="inline-block px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-semibold tracking-wider uppercase">
+                        The Challenge
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
+                        The <span class="italic text-red-400">Frankenstein</span> Stack
+                    </h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Right now, the market is shifting, and your margins are feeling the squeeze. Yet, you are likely paying one company for a website, a second for lead generation, a third for a standalone AI chatbot, and a fourth for presentation software.
+                    </p>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400">
+                                <i class="fa-solid fa-xmark text-xs"></i>
+                            </div>
+                            <span class="text-gray-300">Your monthly overhead is at an all-time high.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400">
+                                <i class="fa-solid fa-xmark text-xs"></i>
+                            </div>
+                            <span class="text-gray-300">Your systems don't talk to each other, causing leads to slip through the cracks.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400">
+                                <i class="fa-solid fa-xmark text-xs"></i>
+                            </div>
+                            <span class="text-gray-300">Nobody's actually using the piecemeal tools you're paying for.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- The Solution -->
+                <div class="space-y-8 relative">
+                    <div class="absolute -inset-4 bg-ylopo/5 blur-2xl rounded-3xl -z-10"></div>
+                    <div class="inline-block px-3 py-1 rounded-full bg-ylopo/10 border border-ylopo/20 text-ylopo text-xs font-semibold tracking-wider uppercase">
+                        The Solution
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">
+                        The <span class="italic text-ylopo">Two-Software</span> Stack
+                    </h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Imagine surviving and thriving in today's market with a simple, frictionless setup. Slash your expenses and get back to basics with just two tools.
+                    </p>
+                    
+                    <div class="bg-ylopo-card border border-ylopo-border rounded-2xl p-6 lg:p-8 mt-6">
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center gap-4 bg-[#1a1a1a] p-4 rounded-xl border border-white/5">
+                                <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Your Existing CRM</h4>
+                                    <p class="text-sm text-gray-400">Keep your data exactly where it is.</p>
+                                </div>
+                                <div class="ml-auto text-ylopo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-center text-ylopo opacity-50">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+
+                            <div class="flex items-center gap-4 bg-ylopo/10 p-4 rounded-xl border border-ylopo/20">
+                                <div class="w-10 h-10 rounded-lg bg-ylopo flex items-center justify-center text-black">
+                                    <img src="https://go.ylopo.com/l/923023/2024-09-24/2yc158/923023/1727222654DOG4OUhH/ylopo_logo.png" alt="Ylopo icon" class="w-6 opacity-80 invert">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Ylopo Ecosystem</h4>
+                                    <p class="text-sm text-gray-400">Everything else you need to scale.</p>
+                                </div>
+                                <div class="ml-auto text-ylopo">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Ecosystem / Features Section -->
+    <section class="py-24 bg-[#0d0d0d] border-t border-white/5 bg-grid-pattern bg-grid">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-300 mb-6">
+                    110+ state-of-the-art tools
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+                    We are the <span class="italic text-ylopo">ultimate Swiss Army Knife</span> for the modern real estate professional.
+                </h2>
+                <p class="text-xl text-gray-400">
+                    Ylopo is not a CRM; it is the complete, AI-powered digital marketing ecosystem designed to wrap seamlessly around the database you already use.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Feature 1 -->
+                <div class="feature-card bg-ylopo-card border border-ylopo-border rounded-2xl p-8 flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-full bg-ylopo/10 flex items-center justify-center text-ylopo text-2xl mb-6">
+                        <i class="fa-solid fa-magnet"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Generate High-Intent Pipelines</h3>
+                    <p class="text-gray-400 leading-relaxed flex-grow">
+                        Dominate Google and Facebook with dynamic, automated campaigns that capture ready-to-transact buyers and sellers at a fraction of the cost of your Frankenstein tech stack.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card bg-ylopo-card border border-ylopo-border rounded-2xl p-8 flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-full bg-ylopo/10 flex items-center justify-center text-ylopo text-2xl mb-6">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Never Chase a Lead Again</h3>
+                    <p class="text-gray-400 leading-relaxed flex-grow">
+                        Deploy our AI Voice and Text assistants to call, text, and qualify your leads 24/7—making sure your database stays warm and you connect with people when they're ready for your help.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card bg-ylopo-card border border-ylopo-border rounded-2xl p-8 flex flex-col h-full">
+                    <div class="w-14 h-14 rounded-full bg-ylopo/10 flex items-center justify-center text-ylopo text-2xl mb-6">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Resurrect "Dead" Databases</h3>
+                    <p class="text-gray-400 leading-relaxed flex-grow">
+                        Unleash dynamic remarketing to track your older prospects across the internet, automatically pulling them back to your custom-branded IDX website.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card bg-ylopo-card border border-ylopo-border rounded-2xl p-8 flex flex-col h-full lg:col-span-1 lg:col-start-1 lg:ml-auto w-full">
+                    <div class="w-14 h-14 rounded-full bg-ylopo/10 flex items-center justify-center text-ylopo text-2xl mb-6">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Win Every Listing</h3>
+                    <p class="text-gray-400 leading-relaxed flex-grow">
+                        Generate undeniable, data-backed listing presentations, 360 home tours, dynamic video ads, and active buyer maps in seconds with our A-Z Design Studio.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card bg-ylopo-card border border-ylopo-border rounded-2xl p-8 flex flex-col h-full lg:col-span-2 w-full">
+                    <div class="w-14 h-14 rounded-full bg-ylopo/10 flex items-center justify-center text-ylopo text-2xl mb-6">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Priority Alert Radar System</h3>
+                    <p class="text-gray-400 leading-relaxed flex-grow">
+                        Surface high-intent buyer and seller behavior from new, old, and past leads to create immediate, actionable opportunities for your team. Stop guessing and know exactly who to call right now.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA / Summary -->
+    <section class="py-24 bg-ylopo-dark relative overflow-hidden" id="demo">
+        <!-- Background Accents -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-ylopo to-transparent opacity-20"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ylopo/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-8">
+                You generate your leads.<br>
+                <span class="text-gray-500">You nurture your leads.</span><br>
+                <span class="text-gray-600">You communicate with your leads.</span><br>
+                <span class="text-ylopo italic">You close your leads.</span>
+            </h2>
+            <p class="text-xl md:text-2xl font-medium text-white mb-10">
+                All in one place.
+            </p>
+            
+            <div class="bg-ylopo-card border border-ylopo-border rounded-2xl p-8 md:p-12 shadow-2xl">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Keep your CRM. <span class="text-red-400 italic">Fire your expensive piecemeal vendors.</span></h3>
+                <p class="text-gray-400 mb-8 text-lg">Let Ylopo handle everything else.</p>
+                
+                <form class="max-w-md mx-auto space-y-4">
+                    <input type="email" placeholder="Enter your work email" class="w-full bg-[#0a0a0a] border border-ylopo-border rounded-lg px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-ylopo transition">
+                    <button type="submit" class="w-full bg-ylopo text-black font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#8ade13] transition shadow-[0_0_20px_rgba(157,239,21,0.3)] hover:shadow-[0_0_30px_rgba(157,239,21,0.5)]">
+                        Book Your Demo
+                    </button>
+                </form>
+                <p class="text-sm text-gray-500 mt-4">No commitment required. See the platform in action.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ylopo-dark border-t border-white/5 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
+                
+                <!-- Logo & Info -->
+                <div class="col-span-2 md:col-span-1">
+                    <img src="https://go.ylopo.com/l/923023/2024-09-24/2yc158/923023/1727222654DOG4OUhH/ylopo_logo.png" alt="Ylopo Logo" class="h-8 mb-6">
+                    <p class="text-gray-400 text-sm mb-6 pr-4">
+                        The intelligent real estate platform that works as hard as you do.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p><i class="fa-solid fa-location-dot w-5 text-gray-500"></i> Santa Monica, CA</p>
+                        <p><i class="fa-solid fa-phone w-5 text-gray-500"></i> (844) 359-5493</p>
+                        <p><i class="fa-solid fa-envelope w-5 text-gray-500"></i> info@ylopo.com</p>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Platform</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-ylopo transition">AI Voice</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">AI Text</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">Lead Generation</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">IDX Websites</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Learn</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-ylopo transition">How It Works</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">Why Ylopo</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">Results</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Resources</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-ylopo transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 4 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-ylopo transition">About</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-ylopo transition">Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 Ylopo. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Chat Icon (from screenshots) -->
+    <button class="fixed bottom-6 right-6 w-14 h-14 bg-ylopo rounded-full flex items-center justify-center text-black text-xl shadow-lg hover:scale-105 transition-transform z-50">
+        <i class="fa-regular fa-message"></i>
+    </button>
+
+</body>
+</html>
